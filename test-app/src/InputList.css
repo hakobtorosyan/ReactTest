@@ -1,0 +1,90 @@
+input {
+  border: none;
+}
+#root {
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+body {
+  background-color: rgba(29,29,29,0.24);
+}
+
+.header {
+  width: 700px;
+  height:100px;
+  background-color: rgba(29,29,29,0.61);
+}
+
+#header {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-weight: bold;
+  font-size: 190%;
+  color: white;
+  font-family: Arial;
+}
+
+.mainDiv {
+  height: 600px;
+  width: 700px;
+  box-shadow: 2px 2px 5px #888888;
+  background-color: white;
+}
+
+#headersDiv {
+  height:50px;
+  width:700px;
+  border-bottom: groove;
+}
+
+.leftBox {
+  float: left;
+  width: 348px;
+  height: 50px;
+  display: inline-block;
+  border-right: groove;
+  border-width: medium;
+}
+
+.rightBox {
+  float: right;
+  width: 348px;
+  height: 50px;
+  display: inline-block;
+}
+
+#pros {
+  position: relative;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 150%;
+}
+
+#cons {
+  position: relative;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 150%;
+}
+
+#tableLeft {
+  float: left;
+  width: 348px;
+  height: 447px;
+  display: inline-block;
+  border-right: groove;
+  border-width: medium;
+  overflow-y: scroll;
+}
+
+#tableRight {
+  float: right;
+  width: 348px;
+  height: 447px;
+  display: inline-block;
+  overflow-y: scroll;
+}
+
