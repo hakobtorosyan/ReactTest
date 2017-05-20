@@ -1,0 +1,16 @@
+#inputTodoDiv {
+  display: -webkit-flex;
+  display: flex;
+  width: 300px;
+  background-color: white;
+}
+
+#inputTodo {
+  border: none;
+  height: 50px;
+  width: 250px;
+}
+
+#inputTodoButtonDiv {
+  margin-top: 15px;
+}

@@ -1,0 +1,19 @@
+#worksHeader {
+    display: -webkit-flex;
+    display: flex;
+    width: 690px;
+    height: 100px;
+    background-color: white;
+}
+
+#workTitle {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 300%;
+}
+
+ #workCount {
+   margin-top: 70px;
+   margin-left: 200px;
+   color: grey;
+ }
