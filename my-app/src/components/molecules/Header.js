@@ -15,7 +15,7 @@ class Header extends Component {
       if(allWorksCount !== 0) {
         for(let work of todos[0].works)
         {
-          if(work.color === "grey")
+          if(work.color === "lightgrey")
           complated++;
         }
       }
