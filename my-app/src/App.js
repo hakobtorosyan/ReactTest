@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import TodoBox from './components/organisms/TodoBox';
 import WorkBox from './components/organisms/WorkBox';
@@ -5,9 +6,18 @@ import './App.css';
 
 class App extends Component {
 
-  constructor(props)
+ state: {
+    todos: Array<Object>,
+    activeTodo: string,
+    visibleTodos: Array<Object>,
+    visibleWorks: Array<Object>,
+    todoInputField: string,
+    workInputField: string
+  };
+
+  constructor()
   {
-    super(props);
+    super();
     this.state = {todos: [], activeTodo: "", visibleTodos: [], visibleWorks: [], todoInputField: "", workInputField: ""};
   }
 

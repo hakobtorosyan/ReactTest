@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import '../../styles/Todo.css';
 
@@ -6,8 +7,8 @@ class Todo extends Component {
 getTodoWork()
 {
   if(this.props.todo.color !== "green") {
-    let todo = Object.assign({},this.props.todo,{color: "green", textColor: "white"});
-    let todos = this.props.store.state.todos.filter((elem) => (todo.todoName !== elem.todoName));
+    let todo : Object = Object.assign({},this.props.todo,{color: "green", textColor: "white"});
+    let todos : Array<Object> = this.props.store.state.todos.filter((elem) => (todo.todoName !== elem.todoName));
     todos = [...todos,todo];
     this.props.store.setState({todos: todos});
     if(this.props.store.state.activeTodo === "")
@@ -15,9 +16,9 @@ getTodoWork()
     this.props.store.setState({todos: todos, activeTodo: todo.todoName, visibleWorks: todo.works, visibleTodos: todos});
     }
     else{
-      let activeTodo = this.props.store.state.todos.filter(( todo ) => ( todo.todoName === this.props.store.state.activeTodo ));
-      let passiveTodo = Object.assign({},activeTodo[0],{color: "white", textColor: "black"});
-      let elements = this.props.store.state.todos.filter((td) => (td.todoName !== passiveTodo.todoName && td.todoName !== todo.todoName));
+      let activeTodo : Object = this.props.store.state.todos.filter(( todo ) => ( todo.todoName === this.props.store.state.activeTodo ));
+      let passiveTodo : Object = Object.assign({},activeTodo[0],{color: "white", textColor: "black"});
+      let elements : Array<Object> = this.props.store.state.todos.filter((td) => (td.todoName !== passiveTodo.todoName && td.todoName !== todo.todoName));
       elements = [...elements, todo, passiveTodo];
       this.props.store.setState({todos: elements, activeTodo: todo.todoName, visibleWorks: todo.works, visibleTodos: elements});
     }

@@ -1,11 +1,13 @@
+// @flow
 import React, { Component } from 'react';
 import TodoList from '../molecules/TodoList';
 import InputTodo from '../molecules/InputTodo';
 import '../../styles/TodoBox.css';
 
-let visibleTodos = [];
+let visibleTodos : Array<Object> = [];
 
 class TodoBox extends Component {
+searchValue: HTMLInputElement;
 
   searchTodo() {
     if(this.searchValue.value !== "") {

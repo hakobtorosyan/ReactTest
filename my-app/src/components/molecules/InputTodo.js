@@ -1,10 +1,13 @@
+// @flow
 import React, { Component } from 'react';
 import '../../styles/InputTodo.css';
 import '../../styles/Image.css';
 
-class InputTodo extends Component {
 
-setInputFiled(event)
+class InputTodo extends Component {
+todoName : HTMLInputElement;
+
+setInputField(event : Event & {target: HTMLInputElement})
 {
   event.preventDefault();
   this.props.store.setState({todoInputField: event.target.value});
@@ -32,7 +35,7 @@ setInputFiled(event)
     return (
       <div id="inputTodoDiv">
         <div>
-          <input id="inputTodo" type="text" value={this.props.store.state.todoInputField} placeholder="Enter new list name" ref={(input) => this.todoName = input} onInput={this.setInputFiled.bind(this)} />
+          <input id="inputTodo" type="text" value={this.props.store.state.todoInputField} placeholder="Enter new list name" ref={(input) => this.todoName = input} onInput={this.setInputField.bind(this)} />
         </div>
         <div id="inputTodoButtonDiv">
             <a  href="#" onClick={this.addTodo.bind(this)}><img alt="Insert" src="../../../plus.png" className="plusButton"/></a>

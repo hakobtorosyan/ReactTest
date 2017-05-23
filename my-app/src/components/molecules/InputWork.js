@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import '../../styles/InputWork.css';
 import '../../styles/Image.css';
@@ -5,8 +6,9 @@ import '../../styles/Image.css';
 let nextWorkId = 0;
 
 class InputWork extends Component {
+workName: HTMLInputElement;
 
-  setInputFiled(event)
+  setInputFiled(event : Event & {target: HTMLInputElement})
   {
     event.preventDefault();
     this.props.store.setState({workInputField: event.target.value});

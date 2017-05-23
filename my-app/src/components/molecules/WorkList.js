@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import Work from '../atoms/Work';
 import '../../styles/WorkList.css';

@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import '../../styles/Work.css';
 
@@ -6,28 +7,28 @@ class Work extends Component {
   setComplate()
   {
     if(this.props.work.color === "white") {
-      let newWork = Object.assign({},this.props.work,{color: "lightgrey"});
-      let workOwnerTodo = this.props.store.state.todos.filter((todo) => todo.todoName === this.props.store.state.activeTodo);
-      let workInOwnerList = workOwnerTodo[0].works.filter((work) => work.workName !== this.props.work.workName);
+      let newWork : Object = Object.assign({},this.props.work,{color: "lightgrey"});
+      let workOwnerTodo : Array<Object> = this.props.store.state.todos.filter((todo) => todo.todoName === this.props.store.state.activeTodo);
+      let workInOwnerList : Array<Object> = workOwnerTodo[0].works.filter((work) => work.workName !== this.props.work.workName);
       workInOwnerList = [...workInOwnerList, newWork];
-      let newTodo = Object.assign({},workOwnerTodo[0],{works: workInOwnerList});
-      let allTodos = this.props.store.state.todos.filter((todo) => todo.todoName !== this.props.store.state.activeTodo);
+      let newTodo : Object = Object.assign({},workOwnerTodo[0],{works: workInOwnerList});
+      let allTodos : Array<Object> = this.props.store.state.todos.filter((todo) => todo.todoName !== this.props.store.state.activeTodo);
       allTodos = [...allTodos,newTodo];
-      let whiteWorks = workInOwnerList.filter((work) => work.color !== "lightgrey");
-      let greyWorks = workInOwnerList.filter((work) => work.color !== "white");
+      let whiteWorks : Array<Object> = workInOwnerList.filter((work) => work.color !== "lightgrey");
+      let greyWorks : Array<Object> = workInOwnerList.filter((work) => work.color !== "white");
       let visibleWorks = [...whiteWorks,...greyWorks];
       this.props.store.setState({todos: allTodos, visibleTodos: allTodos, visibleWorks: visibleWorks});
 
     } else {
-      let newWork = Object.assign({},this.props.work,{color: "white"});
-      let workOwnerTodo = this.props.store.state.todos.filter((todo) => todo.todoName === this.props.store.state.activeTodo);
-      let workInOwnerList = workOwnerTodo[0].works.filter((work) => work.workName !== this.props.work.workName);
+      let newWork : Object = Object.assign({},this.props.work,{color: "white"});
+      let workOwnerTodo : Array<Object> = this.props.store.state.todos.filter((todo) => todo.todoName === this.props.store.state.activeTodo);
+      let workInOwnerList : Array<Object> = workOwnerTodo[0].works.filter((work) => work.workName !== this.props.work.workName);
       workInOwnerList = [...workInOwnerList, newWork];
-      let newTodo = Object.assign({},workOwnerTodo[0],{works: workInOwnerList});
-      let allTodos = this.props.store.state.todos.filter((todo) => todo.todoName !== this.props.store.state.activeTodo);
+      let newTodo : Object = Object.assign({},workOwnerTodo[0],{works: workInOwnerList});
+      let allTodos : Array<Object> = this.props.store.state.todos.filter((todo) => todo.todoName !== this.props.store.state.activeTodo);
       allTodos = [...allTodos, newTodo];
-      let whiteWorks = workInOwnerList.filter((work) => work.color !== "lightgrey");
-      let greyWorks = workInOwnerList.filter((work) => work.color !== "white");
+      let whiteWorks : Array<Object> = workInOwnerList.filter((work) => work.color !== "lightgrey");
+      let greyWorks : Array<Object> = workInOwnerList.filter((work) => work.color !== "white");
       let visibleWorks = [...whiteWorks,...greyWorks];
       this.props.store.setState({todos: allTodos, visibleWorks: visibleWorks, visibleTodos: allTodos,});
     }
