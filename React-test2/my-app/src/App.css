@@ -1,0 +1,7 @@
+.appBox {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 800px;
+    background-color: white;
+}

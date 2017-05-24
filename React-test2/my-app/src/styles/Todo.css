@@ -1,0 +1,14 @@
+.todoLi {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: groove;
+    border-bottom-color: #ebebe0;
+    height: 50px;
+    width: 300px;
+  }
+
+  .todoLink {
+    color: black;
+    text-decoration: none;
+  }
