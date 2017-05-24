@@ -1,0 +1,13 @@
+﻿.deleteButton {
+    background-color: indianred !important;
+    border-color: lightpink !important;
+    /*margin-left: 5px !important;*/
+}
+
+.buttonsMargin {
+    margin-right:7px
+}
+
+.mySelect {
+    height: 35px;
+}
