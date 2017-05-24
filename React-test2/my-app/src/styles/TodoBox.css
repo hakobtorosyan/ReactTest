@@ -1,0 +1,30 @@
+.todoBoxDiv {
+  width: 300px;
+  height: 800px;
+  display: inline;
+  border-right: groove;
+  border-right-color: #ebebe0;
+}
+
+#todoBoxHeaderDiv {
+  border-bottom: groove;
+  border-bottom-color: #ebebe0;
+  height: 30px;
+}
+
+#todoBoxHeader {
+  align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#todoSearch {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: groove;
+  border-bottom-color: #ebebe0;
+  background-color: lightgrey;
+  height: 50px;
+  width: 300px;
+}
